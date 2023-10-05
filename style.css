@@ -1,0 +1,168 @@
+@font-face {
+  font-family: CopperPlate;
+  src: url("fonts/Copperplate.otf");
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  overflow: hidden;
+  font-family: CopperPlate;
+  color: rgba(255, 255, 255, 0.829);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  width: 85vw;
+  height: 85vh;
+  background: #40404040;
+  padding-left: 4rem;
+  border-radius: 20px;
+}
+
+.logo {
+  margin-top: 2rem;
+}
+.logo img {
+  width: 25rem;
+}
+
+.anim-container {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-size: 2.5rem;
+}
+
+.social {
+  display: flex;
+  width: 12rem;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.social a {
+  color: #ececec;
+}
+
+.right {
+  color: rgb(83, 231, 145);
+  width: 40%;
+  margin-inline: auto;
+  /* background-color: red; */
+  z-index: 10;
+}
+
+a:hover {
+  color: rgb(156, 156, 190);
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 90vw;
+    height: 90vh;
+    padding: 0;
+    align-items: center;
+  }
+
+  .card img {
+    width: 75%;
+  }
+
+  .anim-container {
+    height: 70vh;
+    flex-direction: column-reverse;
+    margin-left: 0;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .text {
+    font-size: 1.5rem;
+  }
+  .right {
+    width: 80%;
+  }
+  .social {
+    margin-inline: auto;
+    width: 80%;
+    margin-top: 1rem;
+  }
+}
+/* 
+#top {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+} */
+
+/* #front {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+  animation-delay: 2s;
+}
+
+#back,
+#side {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+  animation-delay: 2s;
+}
+
+#front1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+  animation-delay: 1s;
+}
+
+#circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+  animation-delay: 3s;
+}
+
+#panel_right,
+#panel_left {
+  opacity: 0;
+  animation: slideUp 1s linear forwards;
+  animation-delay: 3s;
+} */
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
